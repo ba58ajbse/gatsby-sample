@@ -19,6 +19,7 @@ const About = () => {
         data-netlify="true"
         onSubmit={handleSubmit}
       >
+        <input type="hidden" name="form-name" value="contact" />
         <div>
           <input type="text" required name="name" placeholder="お名前" value={values.name} onChange={handleChange} />
         </div>
