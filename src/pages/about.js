@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+import { navigateTo } from "gatsby-link";
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
 const About = () => {
   const [values, setValue] = useState({name: '', email: '', message: ''});
@@ -6,8 +13,20 @@ const About = () => {
   const handleChange = (e => {
     setValue({...values, [e.target.name]: e.target.value});
   });
-  const handleSubmit = () => {
-    alert('お問い合わせありがとうございます')
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...values
+      })
+    })
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
+
     setValue({name: '', email: '', message: ''});
   }
 
@@ -16,7 +35,9 @@ const About = () => {
       <form
         name="contact"
         method="POST"
+        action="/thanks/"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
