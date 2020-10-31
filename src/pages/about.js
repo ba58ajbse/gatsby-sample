@@ -6,8 +6,7 @@ const About = () => {
   const handleChange = (e => {
     setValue({...values, [e.target.name]: e.target.value});
   });
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     alert('お問い合わせありがとうございます')
     setValue({name: '', email: '', message: ''});
   }
