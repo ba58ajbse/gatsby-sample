@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { navigateTo } from "gatsby-link";
+import { navigate } from "gatsby-link";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -24,10 +24,9 @@ const About = () => {
         ...values
       })
     })
-      .then(() => navigateTo(form.getAttribute("action")))
+      .then(() => setValue({name: '', email: '', message: ''}))
+      .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
-
-    setValue({name: '', email: '', message: ''});
   }
 
   return (
