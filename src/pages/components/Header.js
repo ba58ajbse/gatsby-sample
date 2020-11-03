@@ -1,11 +1,9 @@
 import React from 'react';
-import MenuBtn from './MenuBtn';
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header className="header">
       <h1 className="logo">会社</h1>
-      <MenuBtn open={props.open} toggle={props.toggle} />
     </header>
   )
 }
