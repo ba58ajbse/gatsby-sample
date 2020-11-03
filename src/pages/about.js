@@ -24,8 +24,8 @@ const About = () => {
         ...values
       })
     })
-      .then(() => setValue({name: '', email: '', message: ''}))
       .then(() => navigate(form.getAttribute("action")))
+      .then(() => setValue({name: '', email: '', message: ''}))
       .catch(error => alert(error));
   }
 
