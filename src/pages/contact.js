@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { navigate } from "gatsby-link";
+import Layout from './components/Layout';
 
 const encode = (data) => {
   return Object.keys(data)
@@ -7,12 +8,13 @@ const encode = (data) => {
     .join("&");
 }
 
-const About = () => {
+const Contact = () => {
   const [values, setValue] = useState({name: '', email: '', message: ''});
 
   const handleChange = (e => {
     setValue({...values, [e.target.name]: e.target.value});
   });
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -30,7 +32,7 @@ const About = () => {
   }
 
   return (
-    <div>
+    <Layout>
       <form
         name="contact"
         method="POST"
@@ -53,8 +55,8 @@ const About = () => {
           <button type="submit">送信</button>
         </div>
       </form>
-    </div>
+    </Layout>
   )
 }
 
-export default About;
+export default Contact;
