@@ -121,6 +121,9 @@ header {
   background-color: crimson;
   font-size: 12px;
 }
+.form-error {
+  color: crimson;
+}
 
 footer {
   width: 100%;

@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
-    "formik": "^2.2.1",
     "gatsby": "^2.24.79",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "react": "^16.12.0",
