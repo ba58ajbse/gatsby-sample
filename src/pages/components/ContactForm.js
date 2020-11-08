@@ -13,6 +13,7 @@ const ContactForm = () => {
   //   }
 
   const onSubmit = (data) => {
+    console.log(data);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -35,7 +36,7 @@ const ContactForm = () => {
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contact" ref={register}/>
       <span className="required">必須</span>
       <label htmlFor="name">お名前</label>
       <br />
