@@ -33,7 +33,9 @@ const Contact = () => {
 
   return (
     <Layout>
+      <h1 className="contact-title">CONTACT</h1>
       <form
+        className="contact-form"
         name="contact"
         method="POST"
         action="/thanks/"
@@ -42,18 +44,16 @@ const Contact = () => {
         onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
-        <div>
-          <input type="text" required name="name" placeholder="お名前" value={values.name} onChange={handleChange} />
-        </div>
-        <div>
-          <input type="email" name="email" placeholder="Email" value={values.email} onChange={handleChange} />
-        </div>
-        <div>
-          <textarea name="message" required placeholder="お問合せ内容" value={values.message} onChange={handleChange} />
-        </div>
-        <div>
-          <button type="submit">送信</button>
-        </div>
+          <span className="required">必須</span><label for="name">お名前</label>
+          <br />
+          <input type="text" id="name" className="form-input" required name="name" placeholder="お名前" value={values.name} onChange={handleChange} />
+          <span className="required">必須</span><label for="email">メールアドレス</label>
+          <br />
+          <input type="email" id="email" className="form-input" name="email" placeholder="Email" value={values.email} onChange={handleChange} />
+          <span className="required">必須</span><label for="message">お問い合わせ内容</label>
+          <br />
+          <textarea id="message" name="message" className="form-input form-textarea" required placeholder="お問合せ内容" value={values.message} onChange={handleChange} />
+          <button className="submit-btn" type="submit">送信</button>
       </form>
     </Layout>
   )

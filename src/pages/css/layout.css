@@ -6,3 +6,6 @@ li,
 ul {
   list-style: none;
 }
+html {
+  background-color: rgb(170, 170, 170);
+}
