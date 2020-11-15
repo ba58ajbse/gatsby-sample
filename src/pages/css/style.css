@@ -2,7 +2,7 @@ header {
   height: 60px;
   width: 100%;
   padding: 10px 16px;
-  background-color: rgba(143, 146, 146, 0.555);
+  background-color: #25283e;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,7 +27,7 @@ header {
   margin: auto;
   width: 80%;
   height: 2px;
-  background-color: rgba(39, 39, 39, 0.815);
+  background-color: #ffffff;
   border-radius: 3px;
   position: absolute;
   left: 0;
@@ -57,7 +57,7 @@ header {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(100, 100, 100, 0.8);
+  background: rgba(139, 139, 139, 0.7);
   z-index: 10;
   animation: fadeIn 0３s linear;
   animation-fill-mode: both;
@@ -138,7 +138,7 @@ footer {
   width: 100%;
   height: 180px;
   color: white;
-  background-color: rgb(0, 0, 47);
+  background-color: #25283e;
   text-align: center;
 }
 .footer-info {
