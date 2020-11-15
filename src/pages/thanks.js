@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from 'gatsby'
 
 export default () => (
-  <div>
-    <h1>Thank you!</h1>
+  <div className="thanks-container">
+    <h1 className="thanks-title">お問い合わせいただきありがとうございます</h1>
     <p>This is a custom thank you page for form submissions</p>
-    <Link to="/">to Home</Link>
+    <Link to="/" className="to-home">&lt; HOME</Link>
   </div>
 );
