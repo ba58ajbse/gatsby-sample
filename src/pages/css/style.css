@@ -51,6 +51,8 @@ header {
   transform: rotate(-45deg);
 }
 /* ============================================ */
+
+/* オーバーレイ */
 #overlay {
   position: fixed;
   left: 0;
@@ -59,17 +61,22 @@ header {
   height: 100%;
   background: rgba(139, 139, 139, 0.7);
   z-index: 10;
-  animation: fadeIn 0３s linear;
-  animation-fill-mode: both;
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.8;
-  }
+.overlay-enter {
+  opacity: 0;
 }
+.overlay-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.overlay-exit {
+  opacity: 1;
+}
+.overlay-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+/* ============================================ */
 
 .nav-list {
   max-width: 360px;
