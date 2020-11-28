@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Header = () => {
   return (
     <header className="header">
-      <h1 className="logo">会社</h1>
+      <Link to="/">
+        <h1 className="logo">S.S.S</h1>
+      </Link>
     </header>
   )
 }

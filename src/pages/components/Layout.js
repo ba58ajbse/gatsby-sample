@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './Footer';
+// import Footer from './Footer';
 import Header from './Header';
 import Meta from './Meta';
 import MenuOverlay from './MenuOverlay';
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <Header />
       <MenuOverlay />
       <main>{ children }</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
