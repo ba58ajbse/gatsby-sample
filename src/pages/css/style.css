@@ -9,7 +9,11 @@ header {
 }
 .logo {
   font-size: 1.2rem;
+  color: white;
 }
+/* .background {
+  background-size: cover;
+} */
 /* ============================================ */
 /* メニューボタン */
 .menu-btn {
@@ -27,7 +31,7 @@ header {
   margin: auto;
   width: 80%;
   height: 2px;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 3px;
   position: absolute;
   left: 0;
@@ -59,7 +63,7 @@ header {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(139, 139, 139, 0.7);
+  background: rgba(114, 114, 114, 0.8);
   z-index: 10;
 }
 .overlay-enter {
@@ -88,12 +92,14 @@ header {
 .nav-item {
   padding: 20px;
   font-size: 30px;
+  color: white;
 }
-
 .first-view {
   /* height: 100%; */
   height: 800px;
 }
+
+/* コンタクト */
 .contact-title {
   text-align: center;
   margin: 20px 0;
@@ -106,6 +112,7 @@ header {
   width: 100%;
   padding: 4px;
   margin: 10px 0;
+  border: 1px solid gray;
   border-radius: 4px;
   background-color: white;
   font-size: 18px;
@@ -131,6 +138,7 @@ header {
 .form-error {
   color: crimson;
 }
+/* ============================================= */
 .thanks-container {
   padding: 40px;
   text-align: center;
